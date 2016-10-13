@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>h5内容组织功能组件测试</title>
+
+    <!-- 基本资源库 -->
+    <script type="text/javascript" src="../js/lib/jquery.js"></script>
+    <script type="text/javascript" src="../js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../js/lib/jquery.fullpage.js"></script>
+
+    <!-- H5对象资源&管理内容：页-组件 -->
+    <script type="text/javascript" src="../js2/h5.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/H5.css">
+
+    <script type="text/javascript" src="../js2/base.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/H5ComponentBase.css">
+</head>
+
+<body>
+<!-- 测试内容组织功能，以及fullPage页面切换&组件切换 -->
+
+<!-- 内容组织管理，有可能会加载若干个资源 -->
+
+<script type="text/javascript">
+    $(function () {
+        var h5 = new H5();
+
+        h5
+        .addPage('face','首页')
+            .addComponent('logo',{
+                text:'logo',
+                width:400,
+                height:100,
+                css:{backgroundColor:'red',top:200,opacity:0},
+                center:true,
+                animateIn:{opacity:1},
+                animateOut:{opacity:0}
+            })
+            .addComponent('slogan',{
+                text:'slogan',
+                width:400,
+                height:100,
+                css:{backgroundColor:'red',top:350},
+                center:true,
+            })
+        .addPage('desc','核心理念')
+            .addComponent('caption',{
+                text:'核心理念',
+                width:400,
+                height:100,
+                css:{backgroundColor:'green',top:350},
+                center:true,
+            })
+        .addPage('page-3','课程分布')
+            .addComponent('caption',{text:'课程方向分布'})
+        .loader( );
+    })
+</script>
+</body>
+</html>
