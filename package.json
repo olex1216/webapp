@@ -1,0 +1,22 @@
+{
+  "name": "webapp-imooc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olex1216/webapp-imooc.git"
+  },
+  "author": "olex",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olex1216/webapp-imooc/issues"
+  },
+  "homepage": "https://github.com/olex1216/webapp-imooc#readme"
+}
