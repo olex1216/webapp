@@ -16,10 +16,10 @@ var H5 =function ( ) {
         jdata.push({isPage:true,name:name,text:text});
         var page = $('<div class="h5_page section">');
 
-        if( name != undefined ){
+        if( name !== undefined ){
             page.addClass('h5_page_'+name);
         }
-        if( text != undefined ){
+        if( text !== undefined ){
             page.text(text);
         }
         this.el.append(page);
@@ -28,7 +28,7 @@ var H5 =function ( ) {
             this.whenAddPage();
         }
         return this;
-    }
+    };
 
     /* 新增一个组件 */
     this.addComponent = function(name, cfg){
@@ -73,11 +73,12 @@ var H5 =function ( ) {
                 component = new H5ComponentPoint(name,cfg);
                 break;
             default:
+                break;
         }
 
         page.append(component);
         return this;
-    }
+    };
     /* H5对象初始化呈现 */
     this.loader = function( firstPage ){
         this.el.fullpage({
@@ -93,7 +94,7 @@ var H5 =function ( ) {
         if(firstPage){
             $.fn.fullpage.moveTo( firstPage );
         }
-    }
+    };
     this.loader = typeof H5_loading == 'function' ? H5_loading : this.loader;
     return this;
-}
+};
