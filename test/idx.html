@@ -97,6 +97,8 @@
         }
         document.write( html.join('') );
     </script>
+
+
     <!-- 主要逻辑 -->
     <script type="text/javascript">
 
@@ -120,7 +122,7 @@
                     },
                     delay:500
                 });
-            }
+            };
 
             h5
             .addPage('face')
@@ -161,7 +163,7 @@
                     animateOut:{opacity:0,right:-50,bottom:-50},
                     delay:1000
                 })
-            .addPage()
+            .addPage('desc')
                 .addComponent('caption',{text:'核心理念'})
                 .addComponent('text',{
                     width:500,
@@ -207,7 +209,7 @@
                     delay:500
                 })
 
-            .addPage()
+            .addPage('polyline')
                 .addComponent('caption',{text:'课程分布方向'})//polyline
                 .addComponent('polyline',{
                     type:'polyline',
@@ -230,7 +232,7 @@
                 })
 
 
-            .addPage()
+            .addPage('pie')
                 .addComponent('caption',{text:'移动开发课程资源'})//pie
                 .addComponent('pie',{
                     type:'pie',
@@ -254,7 +256,7 @@
                     animateIn:{ opacity:1},
                     animateOut:{ opacity:0}
                 })
-            .addPage() //bar（bar_v）
+            .addPage('bar') //bar（bar_v）
                 .addComponent('caption',{text:'前端开发课程'})
                 .addComponent('bar',
                             {
@@ -296,7 +298,7 @@
                     animateOut:{ opacity:0}
                 })
 
-                .addPage() //（bar_v）
+                .addPage('bar_v') //（bar_v）
                 .addComponent('caption',{text:'前端开发课程'})
                 .addComponent('bar',
                             {
@@ -335,7 +337,7 @@
                     animateOut:{ opacity:0}
                 })
 
-            .addPage()
+            .addPage('radar')
                 .addComponent('caption',{text:'后端开发课程'})//radar
 
                 .addComponent('radar',{
@@ -363,7 +365,7 @@
                     },
                     center : true,
                 })
-            .addPage()
+            .addPage('ring')
                 .addComponent('caption',{text:'课程报名人数过万'})//ring
                 .addComponent('ring-all',{
                     type : 'ring',center : true,
@@ -424,7 +426,7 @@
                     animateOut:{ opacity:0},
                 })
 
-          .addPage()
+          .addPage('point')
                 .addComponent('caption',{text:'课程难度分布'})//point
                 .addComponent('point',{
                 type : 'point',
