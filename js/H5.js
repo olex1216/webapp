@@ -14,10 +14,10 @@ var H5 =function ( ) {
      */
     this.addPage = function( name , text ){
         jdata.push({isPage:true,name:name,text:text});
-        var page = $('<div class="h5-page section">');
+        var page = $('<div class="h5_page section">');
 
         if( name !== undefined ){
-            page.addClass('h5-page-'+name);
+            page.addClass('h5_page_'+name);
         }
         if( text !== undefined ){
             page.text(text);
@@ -84,13 +84,13 @@ var H5 =function ( ) {
     this.loader = function( firstPage ){
         this.el.fullpage({
             onLeave:function( index, nextIndex, direction) {
-                $(this).find('.h5-component').trigger('onLeave');
+                $(this).find('.h5_component').trigger('onLeave');
             },
             afterLoad:function( anchorLink, index ) {
-                $(this).find('.h5-component').trigger('onLoad');
+                $(this).find('.h5_component').trigger('onLoad');
             }
         });
-        this.page[0].find('.h5-component').trigger('onLoad');
+        this.page[0].find('.h5_component').trigger('onLoad');
         this.el.show();
         if(firstPage){
             $.fn.fullpage.moveTo( firstPage );

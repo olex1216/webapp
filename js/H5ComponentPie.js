@@ -68,8 +68,10 @@ var H5ComponentPie =function ( name, cfg ) {
     per.text( cfg.data[i][1]*100 +'%'  );
     text.append(per);
 
-    var x = r + Math.sin( .5 * Math.PI - sAngel ) * r;
-    var y = r + Math.cos( .5 * Math.PI - sAngel ) * r;
+    // var x = r + Math.sin( .5 * Math.PI - sAngel ) * r;
+    // var y = r + Math.cos( .5 * Math.PI - sAngel ) * r;
+    var x = r + Math.sin( 0.5 * Math.PI - sAngel + aAngel * item[1] / 2) * r;
+    var y = r + Math.cos( 0.5 * Math.PI - sAngel + aAngel * item[1] / 2) * r;
 
     // text.css('left',x/2);
     // text.css('top',y/2);
