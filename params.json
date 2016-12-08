@@ -1,0 +1,6 @@
+{
+  "name": "Webapp",
+  "tagline": "组件方式开发web app",
+  "body": "\r\n\r\n#组件方式开发web app\r\n\r\n运行方式：\r\n\r\n1.命令行输入http-server,得到ip地址，如：127.0.1:8080\r\n\r\n2.在浏览器输入127.0.1:8080 ，打开！\r\n\r\nAuthor:Olex\r\n\r\nThanks!\r\n\r\nemail:3072549654@qq.com\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
